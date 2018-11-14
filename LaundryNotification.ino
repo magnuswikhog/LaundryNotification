@@ -9,7 +9,6 @@
 
 
 //#define BLYNK_PRINT Serial                // Comment this out to disable prints and save space
-//#define DEBUG_PRINT Serial                // Comment this out to disable prints and save space
 
 
 
@@ -89,9 +88,6 @@ void setup(){
   );
 
   
-  #ifdef DEBUG_PRINT
-    DEBUG_PRINT.begin(9600);
-  #endif
 
   Blynk.begin(BLYNK_AUTH, WIFI_SSID, WIFI_PASSWORD);
   blynkTimer.setInterval(1000L, blynkTimerEvent);  
@@ -128,39 +124,6 @@ void loop(){
     }  
   }
 
-
-
-  #ifdef DEBUG_PRINT
-    /*
-    Serial.print(detector->mVibrationAverage); Serial.print(" ");
-    Serial.print(detector->mVibrationDeviation); Serial.print(" ");
-
-    //Serial.print(detector->mFirstVibrationMillis); Serial.print(" ");
-    //Serial.print(detector->mLatestVibrationMillis); Serial.print(" ");
-    //Serial.print(detector->mVibrationCount); Serial.print(" ");
-      
-    // Plot raw acc and gyra data
-    Serial.print(accX); Serial.print(" ");
-
-    //bool fullCycle = detector->mVibrationCount > config.MIN_VIBRATION_COUNT && (detector->mLatestVibrationMillis-detector->mFirstVibrationMillis) >= config.MIN_VIBRATION_TIME && detector->mFirstVibrationMillis != 0;
-    //Serial.print( fullCycle ? 8000 : 0 ); Serial.print(" ");
-    Serial.print( detector->mVibrationCount*100 ); Serial.print(" ");
-
-    long vibratingTime = detector->mFirstVibrationMillis > 0 ? detector->mLatestVibrationMillis-detector->mFirstVibrationMillis : 0;
-    Serial.print( vibratingTime ); Serial.print(" ");
-
-    long timeSinceLastVibration = detector->mLatestVibrationMillis > 0 ? millis() - detector->mLatestVibrationMillis : 0;
-    Serial.print( timeSinceLastVibration ); Serial.print(" ");
-    
-    // Serial.print(accY); Serial.print(" ");
-    // Serial.print(accZ); Serial.print(" ");  
-    // Serial.print(gyX); Serial.print(" ");
-    // Serial.print(gyY); Serial.print(" ");
-    // Serial.print(gyZ); Serial.print(" ");
-    
-    Serial.println(" ");
-    */
-  #endif
   
   delay(config.DELAY);
 }

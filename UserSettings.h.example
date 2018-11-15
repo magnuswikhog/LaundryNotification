@@ -1,5 +1,5 @@
-#ifndef UserDefinitions_h
-#define UserDefinitions_h
+#ifndef LAUNDRYNOTIFICATION_USERSETTINGS_H
+#define LAUNDRYNOTIFICATION_USERSETTINGS_H
 
 
 #define BLYNK_AUTH "YOUR-BLYNK-API-AUTH-KEY"

@@ -1,5 +1,5 @@
-#ifndef LaundryCycleDetector_h
-#define LaundryCycleDetector_h
+#ifndef LAUNDRYNOTIFICATION_LAUNDRYCYCLEDETECTOR_H
+#define LAUNDRYNOTIFICATION_LAUNDRYCYCLEDETECTOR_H
 
 #include "Arduino.h"
 

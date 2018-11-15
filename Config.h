@@ -1,5 +1,5 @@
-#ifndef Config_h
-#define Config_h
+#ifndef LAUNDRYNOTIFICATION_CONFIG_H
+#define LAUNDRYNOTIFICATION_CONFIG_H
 
 
 struct Config{

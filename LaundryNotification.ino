@@ -32,7 +32,7 @@ void setConfig(bool debug, Config& config){
 
 #define WIFI_STATUS_LED 4
 #define LAUNDRY_STATUS_LED 5
-#define DEBUG_INPUT_PIN 0
+#define DEBUG_INPUT_PIN 12
 
 
 
@@ -60,11 +60,11 @@ void setup(){
 
   pinMode(LAUNDRY_STATUS_LED, OUTPUT);
   pinMode(WIFI_STATUS_LED, OUTPUT);
-  pinMode(DEBUG_INPUT_PIN, INPUT);
+  pinMode(DEBUG_INPUT_PIN, INPUT_PULLUP);
   digitalWrite(LAUNDRY_STATUS_LED, HIGH); // HIGH = Builtin LED off
   digitalWrite(WIFI_STATUS_LED, LOW); // LOW = GPIO LED off
 
-  bool useDebugConfig = digitalRead(DEBUG_INPUT_PIN) == HIGH;
+  bool useDebugConfig = digitalRead(DEBUG_INPUT_PIN) == LOW;
   setConfig( useDebugConfig, config );
   if( useDebugConfig ){
     for(int i=0; i<10; i++){
